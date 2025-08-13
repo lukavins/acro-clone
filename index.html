@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Acrobat Clone</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    #pdf-render { border: 1px solid #ccc; margin-top: 10px; }
+    #controls { padding: 10px; background: #f0f0f0; }
+    canvas { border: 1px solid #000; }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <input type="file" id="file-input" accept="application/pdf"/>
+    <button id="prev-page">Previous</button>
+    <button id="next-page">Next</button>
+    <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+    <button id="add-text">Add Text</button>
+    <button id="download">Download PDF</button>
+  </div>
+  <canvas id="pdf-render"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
